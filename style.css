@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: "Fredoka", "trebuchet MS", "Comic Sans MS", sans-serif;
+    background-color: #fff0f3;
+    color: #4a3340;
+    text-align: center;
+    line-height: 1.5;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+body.story-a {background-color: #5a4a78; color: #fff4f4}
+body.story-b {background-color: #fff3c9; color: #4a3340}
+
+h1 {margin-bottom: 0.25rem; font-size: 1.9rem; }
+h2 {margin: 0.5em 0; }
+
+main {
+    max-width: 480px;
+    margin: 0 auto;
+}
+/* Round, pill-shaped buttons */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1.3rem;
+  margin: 0.25rem;
+  border: 3px solid #e63946;
+  border-radius: 999px;
+  background-color: white;
+  color: #4a3340;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+button:hover { background-color: #ffd9de; transform: scale(1.07); }
+button:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+button.active { background-color: #e63946; color: white; }
+ 
+/* The picture, with a cute frame that floats gently */
+#story-image {
+  width: 100%;
+  border-radius: 28px;
+  border: 6px solid white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  animation: float 3s ease-in-out infinite;
+}
+#story-image:hover { transform: scale(1.03) rotate(-1deg); }
+/* JS adds this class briefly to make a fade effect */
+#story-image.fade { opacity: 0; }
+ 
+@keyframes float {
+  0%, 100% { margin-top: 0; }
+  50%      { margin-top: -6px; }
+}
+ 
+#step-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.8rem 0 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #e63946;
+}
+body.story-a #step-label { color: #ffb3bd; }
+ 
+#caption {
+  min-height: 7rem;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 0.6rem 1rem;
+}
+ 
+/* Step dots */
+#dots { margin: 0.5rem 0; }
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #c9b5bd;
+  transition: transform 0.2s;
+}
+.dot.active { background-color: #e63946; transform: scale(1.5); }
+ 
+.hint { font-size: 0.85rem; opacity: 0.75; }
+ 
+@media (prefers-reduced-motion: reduce) {
+  #story-image { animation: none; }
+}
+ 
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<hmtl lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta name= "viewport" content="width=devide-width, inital-scale=1">
+    <title> The Power of Sequencing: Little Red Riding Hood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>&#127807; The Power of Sequencing &#127807; </h1>
+        <p>Little Red Riding Hood, told two ways with the same three images.</p>
+    </header>
+
+    <!-- Buttons to choose which sequence to view -->
+    <div id="story-buttons">
+        <button id="btn-a" class="active">&#128561; THe Warning </button>
+        <button id="btn-b">&#128058; The Wolf's Side </button>
+    </div>
+    
+    <main>
+        <h2 id="story-title"></h2>
+
+        <!-- cloick the image to go to the next step-->
+        <img id="story-image" src="images/girl.svg" alt="">
+
+        <p id="step-label"> </p>
+        <p id="caption"></p>
+
+        <!-- show which step you are on-->
+        <div id="dots">
+         <span class="dot"></span>
+         <span class="dot"></span>
+         <span class="dot">
+        </div>
+       
+        <div id="nav-buttons">
+         <button id="back">&larr; Back</button>
+         <button id="next">Next &rarr;</button>
+        </div>
+
+        <p class="hint">Tip: click the picture, or use the arrow keys.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
